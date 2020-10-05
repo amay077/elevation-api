@@ -1,0 +1,15 @@
+version: '3.1'
+services:
+  firebase-tools:
+    build: ./
+    container_name: firebase-tools
+    restart: always
+    volumes:
+      - ../:/work
+    working_dir: "/work"
+    # environment: 
+    #   FIREBASE_TOKEN: ${FIREBASE_TOKEN}
+    command:
+      # ls
+      sh ./script/deploy.sh
+      # echo "hello"
