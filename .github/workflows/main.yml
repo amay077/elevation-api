@@ -1,8 +1,8 @@
-name : generate data.json other files
+name : deploy to firebase
 on : 
   push :
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
