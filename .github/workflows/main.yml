@@ -15,7 +15,7 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
-          docker-compose run --rm firebase-tools
+          docker-compose -f ./docker/docker-compose.yml run --rm firebase-tools
       # - name: upload
       #   uses: actions/upload-artifact@v1
       #   with:
