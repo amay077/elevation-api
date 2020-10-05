@@ -12,8 +12,10 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
-          docker-compose run --rm -e "FIREBASE_TOKEN=${{ secrets.FIREBASE_TOKEN }}" firebase-tools
+          docker-compose run --rm firebase-tools
       # - name: upload
       #   uses: actions/upload-artifact@v1
       #   with:
